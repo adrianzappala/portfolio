@@ -1,0 +1,717 @@
+/* Ajustes básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiamos la fuente */
+    line-height: 1.6;
+    background-color: #f7f7efbd;
+    color: #333;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+/* Barra de navegación */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333; /* Color oscuro en modo claro */
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Cambio de color al pasar el cursor */
+.navbar ul li a:hover {
+    color: #ff6c37; /* Naranja */
+}
+
+/* Modo oscuro para la barra de navegación */
+body.dark-mode .navbar ul li a {
+    color: #f4f4f4; /* Color claro en modo oscuro */
+}
+
+body.dark-mode .navbar ul li a:hover {
+    color: #ff6c37; /* Naranja */
+}
+
+#particles-js {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+body.dark-mode {
+    background-color: #0e1a2b;
+    color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding-top: 20px;
+}
+
+.profile-pic {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.2);
+}
+
+header {
+    background-color: transparent;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #000000;
+    transition: transform 0.6s ease-in-out;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    transition: transform 0.6s ease-in-out;
+}
+
+section#about {
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    width: 80%;
+    position: relative;
+    z-index: 2;
+}
+
+section#about p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0 20px;
+}
+
+.floating-footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8c8c8c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.floating-footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.floating-footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.floating-footer ul li a:hover {
+    color: #ccc;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#sun-icon,
+#moon-icon {
+    font-size: 24px;
+}
+
+body.dark-mode .floating-footer {
+    background-color: #333;
+}
+
+body.dark-mode h1,
+body.dark-mode p,
+body.dark-mode .job-title {
+    color: #f4f4f4;
+}
+
+h1:hover,
+.job-title:hover,
+body p:hover {
+    transform: scale(1.1);
+    transition: transform 0.6s ease-in-out;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 40px; /* Aumentar el espacio entre las tarjetas de proyectos */
+    margin-top: 20px;
+}
+
+.project-card {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(169, 169, 169, 0.3);
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+body.dark-mode .project-card h3 {
+    color: #fff;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.technologies {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tech {
+    background-color: #333;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 0.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.tech:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.6rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech:hover::after {
+    opacity: 1;
+}
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #8c8c8c;
+    border-radius: 50%;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.github-btn i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Modo oscuro para las mini cajitas de tecnologías */
+body.dark-mode .tech {
+    background-color: #f4f4f4; /* Fondo claro en modo oscuro */
+    color: #333; /* Texto oscuro en modo oscuro */
+}
+.project-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+/* Modo oscuro para los íconos de GitHub y el botón de reproducción */
+body.dark-mode .project-links a {
+    background-color: #f4f4f4; /* Fondo claro en modo oscuro */
+    color: #333; /* Ícono oscuro en modo oscuro */
+}
+
+.project-links a:hover {
+    background-color: #7a7a7a;
+}
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+body.dark-mode #about h2 {
+    color: #f4f4f4;
+}
+
+body.dark-mode .project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f4f4f4;
+    border: 1px solid #fff;
+}
+
+body.dark-mode .project-card .project-links a {
+    background-color: #8c8c8c;
+    color: #fff;
+}
+
+body.dark-mode .project-img img {
+    filter: brightness(0.5);
+}
+
+section#projects {
+    margin-top: 100px; /* Aumentar el margen superior de la sección de proyectos */
+}
+
+#skills {
+    margin-top: 100px; /* Aumentar el margen superior de la sección de habilidades */
+    margin-bottom: 100px; /* Aumentar el margen inferior de la sección de habilidades */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+.skill-card {
+    background-color: rgba(169, 169, 169, 0.3);
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 20px;
+    width: 25%;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    margin: 0 10px;
+   
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+    width: 80px;
+    height: 80px;
+}
+
+.skill i {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+body.dark-mode .skill {
+    background-color: #0e1a2b;
+    border: 1px solid #fff;
+}
+
+.skill.html i {
+    color: #e44d26;
+}
+
+.skill.css i {
+    color: #264de4;
+}
+
+.skill.js i {
+    color: #f0db4f;
+}
+
+.skill.typescript img {
+    width: 40px;
+    height: 40px;
+}
+
+.skill.react i {
+    color: #61dafb;
+}
+
+.skill.python i {
+    color: #3776ab;
+}
+
+.skill.c img {
+    width: 40px;
+    height: 40px;
+}
+
+.skill.sql i {
+    color: #f29111;
+}
+
+.skill.vscode i {
+    color: #007acc;
+}
+
+.skill.git i {
+    color: #f05032;
+}
+
+.skill.github i {
+    color: #333;
+}
+/* Modo oscuro para el ícono de GitHub */
+body.dark-mode .skill.github i {
+    color: #f4f4f4; /* Color claro para modo oscuro */
+}
+
+.skill.postman i {
+    color: #ff6c37;
+}
+
+.skill.sqlite i {
+    color: #0a73a3c2;
+}
+
+body.dark-mode .skill-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+}
+
+body.dark-mode .skill-card h3 {
+    color: #f4f4f4;
+}
+
+/* Estilos para la sección de Estudios y Certificaciones */
+#education {
+    margin-top: 100px; /* Aumentar el margen superior */
+    margin-bottom: 100px; /* Aumentar el margen inferior */
+    position: relative; /* Necesario para la línea central */
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column; /* Organiza las tarjetas en una columna */
+    gap: 40px; /* Espacio entre tarjetas */
+    margin-top: 20px;
+    position: relative; /* Necesario para la línea central */
+}
+
+/* Línea central */
+.education-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px; /* Grosor de la línea */
+    height: 100%;
+    background-color: #333; /* Color de la línea */
+    transform: translateX(-50%); /* Centrar la línea */
+}
+
+/* Estilos para las tarjetas */
+.education-card {
+    background-color: white; /* Fondo blanco para el texto */
+    border-radius: 10px;
+    border: 1px solid #333;
+    padding: 20px;
+    width: 40%; /* Ancho de cada tarjeta (más vertical) */
+    transition: transform 0.3s ease;
+    position: relative; /* Necesario para posicionar las tarjetas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Alternar la posición de las tarjetas */
+.education-card:nth-child(odd) {
+    left: 5%; /* Tarjetas impares a la izquierda con margen */
+    margin-right: auto; /* Alinear a la izquierda */
+}
+
+.education-card:nth-child(even) {
+    right: 5%; /* Tarjetas pares a la derecha con margen */
+    margin-left: auto; /* Alinear a la derecha */
+}
+
+/* Texto adicional al lado de cada tarjeta */
+.education-card::after {
+    content: attr(data-year); /* Usamos el atributo data-year para el texto */
+    position: absolute;
+    top: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333; /* Color del texto en modo claro */
+    transform: translateY(-50%);
+    background-color: white; /* Fondo del cuadro */
+    border: 1px solid #333; /* Borde del cuadro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 12px; /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Posición del texto adicional para tarjetas impares (izquierda) */
+.education-card:nth-child(odd)::after {
+    right: -50%; /* Posición a la derecha de la línea central */
+}
+
+/* Posición del texto adicional para tarjetas pares (derecha) */
+.education-card:nth-child(even)::after {
+    left: -50%; /* Posición a la izquierda de la línea central */
+}
+
+.education-card:hover {
+    transform: scale(1.05);
+}
+
+.education-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.education-card .institution {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.education-card .date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.education-card .description {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Modo oscuro para la sección de Estudios y Certificaciones */
+body.dark-mode .education-card {
+    background-color: #1e293b; /* Fondo oscuro para el texto */
+    border: 1px solid #fff;
+}
+
+body.dark-mode .education-card h3,
+body.dark-mode .education-card .description {
+    color: #f4f4f4;
+}
+
+body.dark-mode .education-card .institution {
+    color: #ccc;
+}
+
+body.dark-mode .education-card .date {
+    color: #aaa;
+}
+
+body.dark-mode .education-container::before {
+    background-color: #fff; /* Color de la línea en modo oscuro */
+}
+
+body.dark-mode .education-card::after {
+    background-color: #1e293b; /* Fondo del cuadro en modo oscuro */
+    border: 1px solid #fff; /* Borde del cuadro en modo oscuro */
+    color: #f4f4f4; /* Color del texto en modo oscuro */
+}
+
+
+
+/* Media Queries para hacer responsive */
+@media (max-width: 768px) {
+    .education-card {
+        width: 70%; /* Ajusta el ancho en tablets */
+        left: 0 !important; /* Centrar todas las tarjetas en tablets */
+        right: 0 !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .education-container::before {
+        display: none; /* Ocultar la línea central en tablets */
+    }
+
+    /* Ocultar el texto adicional en tablets y móviles */
+    .education-card::after {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .education-card {
+        width: 90%; /* Ajusta el ancho en móviles */
+    }
+}
+
+
+
+/* Media Queries para hacer responsive */
+@media (max-width: 1200px) {
+    .project-card {
+        width: 30%;
+    }
+    .skill-card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 900px) {
+    .project-card {
+        width: 45%;
+    }
+    .skill-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        width: 90%;
+    }
+    .skill-card {
+        width: 90%;
+        margin: 0 auto 20px; /* Centrado en móviles */
+
+    }
+
+    /* Ajustar márgenes en móviles */
+    .skill-card.frontend,
+    .skill-card.utilities {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

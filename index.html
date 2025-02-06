@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adrián Zappala</title>
+  <link rel="icon" type="image/jpg" href="img/icono-programacion.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body id="top">
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="https://drive.google.com/file/d/1dVwZbcXnC0pncgRvYFg9_LbDm6O-Qzyb/view?usp=drive_link" target="_blank" id="cv-link">Curriculum</a></li>
+    </ul>
+  </nav>
+
+  <div id="particles-js"></div>
+
+  <div class="container">
+    <header>
+      <div class="profile">
+        <img src="img/placeholder.jpeg" alt="Foto de Adrián Zappala" class="profile-pic">
+        <h1>Adrián Zappala</h1>
+        <p class="job-title">Frontend Developer</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- Sección "Sobre mí" -->
+      <section id="about">
+        <h2>Sobre mí</h2>
+        <p>Estudiante avanzado de la carrera Tecnicatura en Programación por la Universidad Tecnológica Nacional de Mar del Plata. Tengo cursada y aprobada la Diplomatura en Programación por la UTN a cargo de los profesores Diego Caprioli y Carlos Cadabeira. Apasionado de las nuevas tecnologías, mi propósito es conseguir mi primer trabajo como Programador, ya sea en el Desarrollo Web, Desarrollo de Aplicaciones o en el Análisis de Datos para iniciar mi carrera en el campo de la Informática.</p>
+      </section>
+
+      <!-- Sección de proyectos -->
+      <section id="projects">
+        <h2>Proyectos</h2>
+        <div class="project-card">
+          <h3>Reproductor Musical</h3>
+          <div class="project-img">
+            <img src="img/musica-fondo.jpg" alt="Reproductor Musical">
+          </div>
+          
+          <p>Un reproductor de música que permite reproducir, pausar y cambiar canciones.</p>
+          
+          <!-- Tecnologías utilizadas -->
+          <div class="technologies">
+            <span class="tech" title="Tecnología utilizada: HTML">HTML</span>
+            <span class="tech" title="Tecnología utilizada: CSS">CSS</span>
+            <span class="tech" title="Tecnología utilizada: JavaScript">JavaScript</span>
+          </div>
+          
+          <!-- Botones de enlaces -->
+          <div class="project-links">
+            <a href="https://github.com/adrianzappala/musicplayer" target="_blank" class="github-btn">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://adrianzappala.github.io/musicplayer/" target="_blank">
+              <i class="fa-solid fa-play"></i> <!-- Eliminamos la palabra "Demo" -->
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de habilidades -->
+      <section id="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-container">
+            <!-- Frontend -->
+            <div class="skill-card">
+              <h3>Frontend</h3>
+              <div class="skills-list">
+                  <div class="skill html">
+                      <i class="fa-brands fa-html5"></i>
+                  </div>
+                  <div class="skill css">
+                      <i class="fa-brands fa-css3-alt"></i>
+                  </div>
+                  <div class="skill js">
+                      <i class="fa-brands fa-js"></i>
+                  </div>
+                  <div class="skill typescript">
+                      <img src="https://img.icons8.com/color/48/typescript.png" alt="TypeScript" class="skill-icon">
+                  </div>
+                  <div class="skill react">
+                      <i class="fa-brands fa-react"></i>
+                  </div>
+              </div>
+          </div>
+
+            <!-- Backend -->
+            <div class="skill-card">
+              <h3>Backend</h3>
+              <div class="skills-list">
+                  <div class="skill python">
+                      <i class="fa-brands fa-python"></i>
+                  </div>
+                  <div class="skill c">
+                      <img src="https://img.icons8.com/color/48/c-programming.png" alt="C" class="skill-icon">
+                  </div>
+                  <div class="skill sql">
+                      <i class="fa-solid fa-database"></i>
+                  </div>
+              </div>
+          </div>
+
+            <!-- Utilidades -->
+            <div class="skill-card">
+                <h3>Utilidades</h3>
+                <div class="skills-list">
+                    <div class="skill vscode">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="skill git">
+                        <i class="fa-brands fa-git-alt"></i>
+                    </div>
+                    <div class="skill github">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="skill postman">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    <div class="skill sqlite">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Sección de Estudios y Certificaciones -->
+      <section id="education">
+        <h2>Estudios y Certificaciones</h2>
+        <div class="education-container">
+            <!-- Tarjeta de estudio o certificación -->
+            <div class="education-card" data-year="En curso">
+                <h3>Tecnicatura en Programación</h3>
+                <p class="institution">Universidad Tecnológica Nacional Regional Mar del Plata (UTN)</p>
+                <p class="date">En curso</p>
+                <p class="description">Estudiante avanzado de la carrera Tecnicatura en Programación, con enfoque en desarrollo de software y aplicaciones.</p>
+            </div>
+
+            <!-- Otra tarjeta de estudio o certificación -->
+            <div class="education-card" data-year="2023-2024">
+                <h3>Diplomatura en Programación</h3>
+                <p class="institution">Universidad Tecnológica Nacional Regional Mar del Plata(UTN)</p>
+                <p class="date">2023-2024</p>
+                <p class="description">Cursada y aprobada la Diplomatura en Programación, con enfoque en lógica de programación, algoritmos y estructuras de datos.</p>
+            </div>
+
+            <!-- Otra tarjeta de estudio o certificación -->
+            <div class="education-card" data-year="2020-2023">
+                <h3>Tecnicatura en Comunicación Audiovisual</h3>
+                <p class="institution">Universidad Nacional de Mar del Plata (UNMDP)</p>
+                <p class="date">2020-2023</p>
+                <p class="description">Técnico en Comunicación Audiovisual con enfoque en Fotografía, participación en la producción de objetos audiovisuales, gestión de emprendimientos audiovisuales, investigación del lenguaje audiovisual, proposición de innovaciones en la articulación de lenguajes y tecnologías, integración de equipos de trabajo interdisciplinario.</p>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="floating-footer">
+      <ul>
+        <li><a href="#top"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="http://linkedin.com/in/adrian-zappala" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/adrianzappala" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="mailto:avz_f@hotmail.com"><i class="fa-regular fa-envelope"></i></a></li>
+        <li><button id="theme-toggle"><i id="sun-icon" class="fa-solid fa-sun"></i><i id="moon-icon" class="fa-solid fa-moon" style="display:none;"></i></button></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/particles.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
