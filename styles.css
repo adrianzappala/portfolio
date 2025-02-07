@@ -396,7 +396,7 @@ section#projects {
     border-radius: 10px;
     border: 1px solid #333;
     padding: 20px;
-    width: 25%;
+    width: 100;
     transition: transform 0.3s ease;
     margin-bottom: 20px;
     margin: 0 10px;
@@ -512,6 +512,18 @@ body.dark-mode .skill-card {
 
 body.dark-mode .skill-card h3 {
     color: #f4f4f4;
+}
+/* Media Queries para pantallas mayores a 600px */
+@media (min-width: 601px) {
+    .skills-container {
+        flex-direction: row; /* Cambia a fila en pantallas mayores a 600px */
+        justify-content: space-around; /* Distribuye las tarjetas uniformemente */
+    }
+
+    .skill-card {
+        width: 30%; /* Ajusta el ancho de las tarjetas en fila */
+        margin: 0; /* Elimina los márgenes laterales */
+    }
 }
 
 /* Estilos para la sección de Estudios y Certificaciones */
