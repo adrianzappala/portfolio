@@ -515,177 +515,159 @@ body.dark-mode .skill-card h3 {
     color: #f4f4f4;
 }
 
-/* Estilos para la sección de Estudios y Certificaciones */
-#education {
-    margin-top: 100px; /* Aumentar el margen superior */
-    margin-bottom: 100px; /* Aumentar el margen inferior */
-    position: relative; /* Necesario para la línea central */
+/* Estilos para la sección de habilidades */
+#skills {
+    margin-top: 100px; /* Aumentar el margen superior de la sección de habilidades */
+    margin-bottom: 100px; /* Aumentar el margen inferior de la sección de habilidades */
 }
 
-.education-container {
+.skills-container {
     display: flex;
-    flex-direction: column; /* Organiza las tarjetas en una columna */
-    gap: 40px; /* Espacio entre tarjetas */
-    margin-top: 20px;
-    position: relative; /* Necesario para la línea central */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espacio entre tarjetas */
 }
 
-/* Línea central */
-.education-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px; /* Grosor de la línea */
-    height: 100%;
-    background-color: #333; /* Color de la línea */
-    transform: translateX(-50%); /* Centrar la línea */
-}
-
-/* Estilos para las tarjetas */
-.education-card {
-    background-color: white; /* Fondo blanco para el texto */
+.skill-card {
+    background-color: rgba(169, 169, 169, 0.3);
     border-radius: 10px;
     border: 1px solid #333;
     padding: 20px;
-    width: 40%; /* Ancho de cada tarjeta (más vertical) */
+    width: 25%; /* Ancho de cada tarjeta */
     transition: transform 0.3s ease;
-    position: relative; /* Necesario para posicionar las tarjetas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+    margin: 0 10px;
 }
 
-/* Alternar la posición de las tarjetas */
-.education-card:nth-child(odd) {
-    left: 5%; /* Tarjetas impares a la izquierda con margen */
-    margin-right: auto; /* Alinear a la izquierda */
-}
-
-.education-card:nth-child(even) {
-    right: 5%; /* Tarjetas pares a la derecha con margen */
-    margin-left: auto; /* Alinear a la derecha */
-}
-
-/* Texto adicional al lado de cada tarjeta */
-.education-card::after {
-    content: attr(data-year); /* Usamos el atributo data-year para el texto */
-    position: absolute;
-    top: 50%;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333; /* Color del texto en modo claro */
-    transform: translateY(-50%);
-    background-color: white; /* Fondo del cuadro */
-    border: 1px solid #333; /* Borde del cuadro */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 8px 12px; /* Espaciado interno */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-/* Posición del texto adicional para tarjetas impares (izquierda) */
-.education-card:nth-child(odd)::after {
-    right: -50%; /* Posición a la derecha de la línea central */
-}
-
-/* Posición del texto adicional para tarjetas pares (derecha) */
-.education-card:nth-child(even)::after {
-    left: -50%; /* Posición a la izquierda de la línea central */
-}
-
-.education-card:hover {
+.skill-card:hover {
     transform: scale(1.05);
 }
 
-.education-card h3 {
+.skill-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #333;
 }
 
-.education-card .institution {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 5px;
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
-.education-card .date {
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 10px;
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+    width: 80px;
+    height: 80px;
 }
 
-.education-card .description {
-    font-size: 0.9rem;
-    color: #333;
-    line-height: 1.5;
+.skill i {
+    font-size: 2rem;
+    transition: transform 0.3s ease;
 }
 
-/* Modo oscuro para la sección de Estudios y Certificaciones */
-body.dark-mode .education-card {
-    background-color: #1e293b; /* Fondo oscuro para el texto */
+.skill:hover {
+    transform: scale(1.05);
+}
+
+body.dark-mode .skill {
+    background-color: #0e1a2b;
     border: 1px solid #fff;
 }
 
-body.dark-mode .education-card h3,
-body.dark-mode .education-card .description {
+.skill.html i {
+    color: #e44d26;
+}
+
+.skill.css i {
+    color: #264de4;
+}
+
+.skill.js i {
+    color: #f0db4f;
+}
+
+.skill.typescript img {
+    width: 40px;
+    height: 40px;
+}
+
+.skill.react i {
+    color: #61dafb;
+}
+
+.skill.python i {
+    color: #3776ab;
+}
+
+.skill.c img {
+    width: 40px;
+    height: 40px;
+}
+
+.skill.sql i {
+    color: #f29111;
+}
+
+.skill.vscode i {
+    color: #007acc;
+}
+
+.skill.git i {
+    color: #f05032;
+}
+
+.skill.github i {
+    color: #333;
+}
+/* Modo oscuro para el ícono de GitHub */
+body.dark-mode .skill.github i {
+    color: #f4f4f4; /* Color claro para modo oscuro */
+}
+
+.skill.postman i {
+    color: #ff6c37;
+}
+
+.skill.sqlite i {
+    color: #0a73a3c2;
+}
+
+body.dark-mode .skill-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+}
+
+body.dark-mode .skill-card h3 {
     color: #f4f4f4;
 }
 
-body.dark-mode .education-card .institution {
-    color: #ccc;
-}
-
-body.dark-mode .education-card .date {
-    color: #aaa;
-}
-
-body.dark-mode .education-container::before {
-    background-color: #fff; /* Color de la línea en modo oscuro */
-}
-
-body.dark-mode .education-card::after {
-    background-color: #1e293b; /* Fondo del cuadro en modo oscuro */
-    border: 1px solid #fff; /* Borde del cuadro en modo oscuro */
-    color: #f4f4f4; /* Color del texto en modo oscuro */
-}
-
-
-
-/* Media Queries para hacer responsive */
-@media (max-width: 768px) {
-    .education-card {
-        width: 70%; /* Ajusta el ancho en tablets */
-        left: 0 !important; /* Centrar todas las tarjetas en tablets */
-        right: 0 !important;
-        margin-left: auto;
-        margin-right: auto;
+/* Media Queries para pantallas mayores a 600px */
+@media (min-width: 601px) {
+    .skills-container {
+        flex-direction: row; /* Cambia a fila en pantallas mayores a 600px */
+        justify-content: space-around; /* Distribuye las tarjetas uniformemente */
     }
 
-    .education-container::before {
-        display: none; /* Ocultar la línea central en tablets */
-    }
-
-    /* Ocultar el texto adicional en tablets y móviles */
-    .education-card::after {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .education-card {
-        width: 90%; /* Ajusta el ancho en móviles */
-    }
-}
-
-
-
-/* Media Queries para hacer responsive */
-@media (max-width: 1200px) {
-    .project-card {
-        width: 30%;
-    }
     .skill-card {
-        width: 30%;
+        width: 30%; /* Ajusta el ancho de las tarjetas en fila */
+        margin: 0; /* Elimina los márgenes laterales */
+    }
+}
+
+/* Media Queries para hacer responsive */
+@media (max-width: 600px) {
+    .skill-card {
+        width: 90%; /* Ajusta el ancho en móviles */
+        margin: 0 auto 20px; /* Centrado en móviles */
     }
 }
 
